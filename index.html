@@ -100,17 +100,23 @@
         </ol>
       </div>
       <div id="formula" class="tab-panel">
+        <u1>
+          <li>同じ行動値の場合、合計ステータスが高いユニットが先に行動します</li>
+          <li>その時点でのステータス(HP除く攻撃、魔攻、防御、魔防)と、最大HP/3を加算しています</li>
+          <li>合計ステータスが同じ場合は、残HP割合の多いユニットが先に行動をします</li>
+          <li>残HP割合も同じ場合は、ランダムで行動順が決定します</li>
+          <li>ここでは残HPの計算はしていません</li>
+        </u1>
+<!--リストに変更前ばっくあっぷ
         <p>
           <code>行動値 = ⌊HP÷3⌋ + ⌊攻撃×(1＋バフ率÷100)⌋ + …</code>
         </p>
+-->
       </div>
       <div id="example" class="tab-panel">
         <p>入力例：</p>
          <img src="assets/images/diagram-example.png" alt="入力例の図解">
- <!--URL切り替えOKならあとで消す       <img 
-  src="https://suibfh.github.io/speed-duel-calculator/assets/images/diagram-example.png" 
-  alt="入力例の図解"> -->
-
+        
       </div>
     </div>
   </div>
