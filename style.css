@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 1rem;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+.units {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.unit {
+  flex: 1 1 280px;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+.unit h2 {
+  margin-top: 0;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+input {
+  width: 100%;
+  padding: 0.3rem;
+}
+button {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border: none;
+  background: #007acc;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+#result {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* ── モーダル＆タブ ── */
+.help-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 6px;
+  max-width: 500px;
+  width: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 90%;
+}
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.tabs button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.tabs .active {
+  border-bottom: 2px solid #007acc;
+}
+.tab-panel {
+  display: none;
+  margin-top: 1rem;
+}
+.tab-panel.active {
+  display: block;
+}
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto;
+}
