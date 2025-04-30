@@ -1,3 +1,4 @@
+/* ── 共通 ── */
 * {
   box-sizing: border-box;
 }
@@ -6,10 +7,29 @@ body {
   margin: 0;
   padding: 1rem;
 }
+
+/* ── コンテナ ── */
 .container {
+  position: relative;       /* ヘルプボタンを相対配置 */
   max-width: 600px;
   margin: auto;
+  padding-top: 2rem;        /* ヘッダー＆ボタン分の余白 */
 }
+
+/* ── ヘルプボタン ── */
+.help-btn {
+  position: absolute;
+  top: 0;                   /* コンテナ内上端 */
+  right: 0;                 /* コンテナ内右端 */
+  background: none;
+  border: none;
+  color: #007acc;           /* 見やすい青色に */
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* ── 入力フォーム等 ── */
 .units {
   display: flex;
   flex-wrap: wrap;
@@ -49,15 +69,6 @@ button {
 }
 
 /* ── モーダル＆タブ ── */
-.help-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
 .modal {
   display: none;
   position: fixed; top: 0; left: 0;
