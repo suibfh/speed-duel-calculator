@@ -23,7 +23,7 @@ body {
   right: 0;                 /* コンテナ内右端 */
   background: none;
   border: none;
-  color: #007acc;           /* 見やすい青色に */
+  color: #007acc;           /* 見やすい青色 */
   font-size: 1.2rem;
   cursor: pointer;
   z-index: 1000;
@@ -70,22 +70,25 @@ button {
 
 /* ── モーダル＆タブ ── */
 .modal {
-  display: none;
-  position: fixed; top: 0; left: 0;
+  display: none;              /* 元は非表示。開くときに flex で見せる */
+  position: fixed;
+  top: 0; left: 0;
   width: 100%; height: 100%;
   background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
+  justify-content: center;    /* 横中央 */
+  align-items: center;        /* 縦中央 */
   padding: 1rem;
+  z-index: 1000;
 }
 .modal-content {
   background: #fff;
   border-radius: 6px;
-  max-width: 500px;
-  width: 100%;
+  width: 90%;                 /* ビューポート幅の90% */
+  max-width: 600px;           /* 最大600px */
   padding: 1rem;
-  overflow-y: auto;
-  max-height: 90%;
+  overflow: auto;             /* はみ出た分はスクロール */
+  max-height: 95%;            /* 画面高さの95%まで */
+  z-index: 1001;
 }
 .close-btn {
   float: right;
@@ -115,7 +118,7 @@ button {
   display: block;
 }
 .modal-content img {
-  max-width: 100%;
+  max-width: 100%;            /* モーダル幅に合わせて縮小 */
   height: auto;
   display: block;
   margin: 0.5rem auto;
